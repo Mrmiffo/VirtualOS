@@ -9,6 +9,7 @@
 AFile::AFile()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	content = TArray<FString>();
 	PrimaryActorTick.bCanEverTick = true;
 
 
@@ -17,8 +18,10 @@ AFile::AFile()
 // Called when the game starts or when spawned
 void AFile::BeginPlay()
 {
-	Super::BeginPlay();
 	
+	Super::BeginPlay();
+	path = "C:/Users/anton/Desktop";
+	isDirectory = true;
 }
 
 // Called every frame
@@ -28,12 +31,35 @@ void AFile::Tick( float DeltaTime )
 
 }
 
-TArray<FString> AFile::GetFolderContent(FString path)
+/* Opens the selected file. If the file was a floder the paths to the content of the folder is located in the content variable */
+void AFile::OpenFile()
 {
-	IFileManager& FileManager = IFileManager::Get();
-	TArray<FString> toReturn = TArray<FString>();
-	FileManager.FindFiles(toReturn, *path);
-	return toReturn;
+	if (isDirectory) 
+	{
+		IFileManager& FileManager = IFileManager::Get();
+		FileManager.FindFiles(content, *path);
+		FolderOpening();
+	}
+	else 
+	{
+
+	}
+
 }
 
+void AFile::InitializeFile(FString filePath, FString fileName, bool fileIsDirectory)
+{
+	path = filePath;
+	name = fileName;
+	isDirectory = fileIsDirectory;
+}
 
+void AFile::FileInteract_Implementation()
+{
+
+}
+
+void AFile::FolderOpening_Implementation()
+{
+
+}
