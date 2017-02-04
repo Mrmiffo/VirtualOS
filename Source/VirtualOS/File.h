@@ -20,12 +20,35 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
+
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "File properties")
+		FString path;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "File properties")
+		TArray<FString> content;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "File properties")
+		FString name;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "File properties")
+		bool isDirectory;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "File functions")
+		void FolderOpening();
+
+		void FolderOpening_Implementation();
+
 	UFUNCTION(BlueprintCallable, Category = "File functions")
-		TArray<FString> GetFolderContent(FString path);
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "File properties")
-		FString FilePath;
+		void OpenFile();
 
-	
+	UFUNCTION(BlueprintCallable, Category = "File functions")
+		void InitializeFile(FString filePath, FString fileName, bool fileIsDirectory);
 
-};
+	UFUNCTION(BlueprintImplementableEvent, Category = "File functions")
+		void FileInteract();
+
+	void FileInteract_Implementation();
+
+
+};	
