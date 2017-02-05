@@ -18,10 +18,7 @@ AFile::AFile()
 // Called when the game starts or when spawned
 void AFile::BeginPlay()
 {
-	
 	Super::BeginPlay();
-	path = "C:/Users/anton/Desktop";
-	isDirectory = true;
 }
 
 // Called every frame
@@ -50,13 +47,23 @@ void AFile::OpenFile()
 void AFile::InitializeFile(FString filePath, FString fileName, bool fileIsDirectory)
 {
 	path = filePath;
-	name = fileName;
+	ChangeName(fileName);
 	isDirectory = fileIsDirectory;
 }
 
 void AFile::FileInteract_Implementation()
 {
 
+}
+
+void AFile::NameChanged_Implementation()
+{
+}
+
+void AFile::ChangeName(FString newName)
+{
+	name = newName;
+	NameChanged();
 }
 
 void AFile::FolderOpening_Implementation()

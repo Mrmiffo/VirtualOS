@@ -22,16 +22,16 @@ public:
 
 
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "File properties")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "File properties")
 		FString path;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "File properties")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "File properties")
 		TArray<FString> content;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "File properties")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "File properties")
 		FString name;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "File properties")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "File properties")
 		bool isDirectory;
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "File functions")
@@ -49,6 +49,14 @@ public:
 		void FileInteract();
 
 	void FileInteract_Implementation();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "File functions")
+		void NameChanged();
+
+	void NameChanged_Implementation();
+
+	UFUNCTION(BlueprintCallable, Category = "File functions")
+		void ChangeName(FString newName);
 
 
 };	
