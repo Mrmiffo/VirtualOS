@@ -10,3 +10,13 @@ FString UBPFunctionLibrary::getMonthFromInt(int monthNr)
 
 	return months[monthNr - 1];
 }
+
+FString UBPFunctionLibrary::getTextFromTxt(FString path)
+{
+	FString FilePath = FString(path);
+	FString Content = "";
+
+	FFileHelper::LoadFileToString(Content, *FilePath);
+
+	return Content;
+}
