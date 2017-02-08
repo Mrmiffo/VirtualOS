@@ -23,16 +23,19 @@ public:
 
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "File properties")
-		FString path;
+		FString Path;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "File properties")
-		TArray<FString> content;
+		TArray<FString> ContentFiles;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "File properties")
-		FString name;
+		TArray<FString> ContentFolders;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "File properties")
-		bool isDirectory;
+		FString Name;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "File properties")
+		bool IsDirectory;
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "File functions")
 		void FolderOpening();
@@ -57,6 +60,5 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "File functions")
 		void ChangeName(FString newName);
-
 
 };	
