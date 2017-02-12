@@ -20,3 +20,4 @@ FString UBPFunctionLibrary::getTextFromTxt(FString path)
 
 	return Content;
 }
+

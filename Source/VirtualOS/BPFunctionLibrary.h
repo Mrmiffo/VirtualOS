@@ -14,10 +14,10 @@ class VIRTUALOS_API UBPFunctionLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 public:
+
 		UFUNCTION(BlueprintCallable, Category = "getMonthFromInt")
 		static FString getMonthFromInt(int monthNr);
 	
 		UFUNCTION(BlueprintCallable, Category = "readTxtFile")
 			static FString getTextFromTxt(FString path);
-	
 };
