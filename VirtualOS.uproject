@@ -18,6 +18,10 @@
 			"Name": "VictoryBPLibrary",
 			"Enabled": true,
 			"MarketplaceURL": "http://www.ue4code.com"
+		},
+		{
+			"Name": "WebBrowserWidget",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
