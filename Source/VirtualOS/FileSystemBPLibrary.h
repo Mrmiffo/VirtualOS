@@ -12,6 +12,8 @@ UCLASS()
 class VIRTUALOS_API UFileSystemBPLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
+
+public:
 	UFUNCTION(BlueprintCallable, Category = "Folder Content")
 		static TArray<FString> GetFolderContent(FString path);
 	

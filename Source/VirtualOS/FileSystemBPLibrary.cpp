@@ -30,10 +30,7 @@ TArray<FString> UFileSystemBPLibrary::GetFolderContent(FString path)
 bool UFileSystemBPLibrary::IsDirectory(FString path)
 {
 	IFileManager& FileManager = IFileManager::Get();
-	if (FileManager.DirectoryExists(*path)) {
-		return FileManager.GetStatData(*path).bIsDirectory;
-	}
-	else return false;
+	return FileManager.GetStatData(*path).bIsDirectory;
 	
 	
 }
