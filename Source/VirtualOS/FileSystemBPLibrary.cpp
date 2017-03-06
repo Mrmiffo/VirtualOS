@@ -50,6 +50,16 @@ int32 UFileSystemBPLibrary::FileSize(FString path)
 		return -1;
 }
 
+FString UFileSystemBPLibrary::GetFileExtention(FString path)
+{
+	return FPaths::GetExtension(*path, true);
+}
+
+FString UFileSystemBPLibrary::GetCleanFileName(FString path)
+{
+	return FPaths::GetBaseFilename(*path, true);
+}
+
 bool UFileSystemBPLibrary::MakeDirectory(FString pathToCreate, bool makeNeededSubDir)
 {
 	IFileManager& Manager = IFileManager::Get();
@@ -125,4 +135,20 @@ bool UFileSystemBPLibrary::DeleteFolder(FString path)
 		return PlatformFile.DeleteDirectory(*path);
 	}
 	return false;
+}
+
+FString UFileSystemBPLibrary::GetPathToUserDir() 
+{
+	return FPlatformProcess::UserDir();
+}
+
+FString UFileSystemBPLibrary::GetContainingFolderPath(FString path) 
+{
+
+		if (IsDirectory(*path))
+		{
+			return FPaths::GetPath(FPaths::GetPath(*path));
+		}
+		else return FPaths::GetPath(*path);
+
 }

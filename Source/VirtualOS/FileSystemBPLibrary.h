@@ -26,6 +26,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "File information")
 		static int32 FileSize(FString path);
 
+	UFUNCTION(BlueprintCallable, Category = "File information")
+		static FString GetFileExtention(FString path);
+
+	UFUNCTION(BlueprintCallable, Category = "File information")
+		static FString GetCleanFileName(FString path);
+
 	UFUNCTION(BlueprintCallable, Category = "File managemenet")
 		static bool MakeDirectory(FString pathToCreate, bool makeNeededSubDir);
 
@@ -50,4 +56,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "File managemenet")
 		static bool DeleteFolder(FString path);
 	
+	UFUNCTION(BlueprintPure, Category = "Filesystem navigation")
+		static FString GetPathToUserDir();
+
+	UFUNCTION(BlueprintPure, Category = "Filesystem navigation")
+		static FString GetContainingFolderPath(FString path);
 };
