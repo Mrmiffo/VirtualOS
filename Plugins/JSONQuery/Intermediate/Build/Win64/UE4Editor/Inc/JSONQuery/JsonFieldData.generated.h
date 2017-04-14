@@ -13,7 +13,7 @@ class UObject;
 #endif
 #define JSONQUERY_JsonFieldData_generated_h
 
-#define Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_17_DELEGATE \
+#define VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_17_DELEGATE \
 struct _Script_JSONQuery_eventOnGetResult_Parms \
 { \
 	bool bSuccess; \
@@ -32,7 +32,7 @@ static inline void FOnGetResult_DelegateWrapper(const FMulticastScriptDelegate& 
 
 
 
-#define Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS \
+#define VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execGetRequest) \
 	{ \
@@ -348,7 +348,7 @@ static inline void FOnGetResult_DelegateWrapper(const FMulticastScriptDelegate& 
 	}
 
 
-#define Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetRequest) \
 	{ \
@@ -664,7 +664,7 @@ static inline void FOnGetResult_DelegateWrapper(const FMulticastScriptDelegate& 
 	}
 
 
-#define Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS_NO_PURE_DECLS \
+#define VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesUJsonFieldData(); \
 	friend JSONQUERY_API class UClass* Z_Construct_UClass_UJsonFieldData(); \
@@ -675,7 +675,7 @@ static inline void FOnGetResult_DelegateWrapper(const FMulticastScriptDelegate& 
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS \
+#define VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS \
 	private: \
 	static void StaticRegisterNativesUJsonFieldData(); \
 	friend JSONQUERY_API class UClass* Z_Construct_UClass_UJsonFieldData(); \
@@ -686,7 +686,7 @@ static inline void FOnGetResult_DelegateWrapper(const FMulticastScriptDelegate& 
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_STANDARD_CONSTRUCTORS \
+#define VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UJsonFieldData(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UJsonFieldData) \
@@ -699,7 +699,7 @@ private: \
 public:
 
 
-#define Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_ENHANCED_CONSTRUCTORS \
+#define VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UJsonFieldData(UJsonFieldData&&); \
@@ -710,32 +710,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UJsonFieldData); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UJsonFieldData)
 
 
-#define Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET
-#define Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_19_PROLOG
-#define Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_GENERATED_BODY_LEGACY \
+#define VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET
+#define VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_19_PROLOG
+#define VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET \
-	Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS \
-	Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS \
-	Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_STANDARD_CONSTRUCTORS \
+	VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET \
+	VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS \
+	VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS \
+	VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_GENERATED_BODY \
+#define VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET \
-	Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS_NO_PURE_DECLS \
-	Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_ENHANCED_CONSTRUCTORS \
+	VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET \
+	VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS_NO_PURE_DECLS \
+	VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID Kandidatarbete_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h
+#define CURRENT_FILE_ID VirtualOS_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h
 
 
 #define FOREACH_ENUM_EJSONRESULT(op) \
