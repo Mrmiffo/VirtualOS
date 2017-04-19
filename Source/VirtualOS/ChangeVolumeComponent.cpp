@@ -19,6 +19,7 @@ UChangeVolumeComponent::UChangeVolumeComponent()
 	// ...
 }
 
+//https://blogs.msdn.microsoft.com/larryosterman/2007/03/06/how-do-i-change-the-master-volume-in-windows-vista/
 void UChangeVolumeComponent::changeMasterVolume(float newSoundLevel) {
 	UE_LOG(LogTemp, Warning, TEXT("New windows volume level... %f"), newSoundLevel);
 
@@ -54,6 +55,30 @@ void UChangeVolumeComponent::BeginPlay()
 	
 }
 
+//https://blogs.msdn.microsoft.com/larryosterman/2007/03/06/how-do-i-change-the-master-volume-in-windows-vista/
+void UChangeVolumeComponent::getMasterVolume(float& currentSoundLevel) {
+	HRESULT hr;
+
+	CoInitialize(NULL);
+	IMMDeviceEnumerator *deviceEnumerator = NULL;
+	hr = CoCreateInstance(__uuidof(MMDeviceEnumerator), NULL, CLSCTX_INPROC_SERVER, __uuidof(IMMDeviceEnumerator), (LPVOID *)&deviceEnumerator);
+	IMMDevice *defaultDevice = NULL;
+
+	hr = deviceEnumerator->GetDefaultAudioEndpoint(eRender, eConsole, &defaultDevice);
+	deviceEnumerator->Release();
+	deviceEnumerator = NULL;
+
+	IAudioEndpointVolume *endpointVolume = NULL;
+	hr = defaultDevice->Activate(__uuidof(IAudioEndpointVolume), CLSCTX_INPROC_SERVER, NULL, (LPVOID *)&endpointVolume);
+	defaultDevice->Release();
+	defaultDevice = NULL;
+
+	// -------------------------
+	hr = endpointVolume->GetMasterVolumeLevelScalar(&currentSoundLevel);
+	endpointVolume->Release();
+
+	CoUninitialize();
+}
 
 // Called every frame
 void UChangeVolumeComponent::TickComponent( float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction )

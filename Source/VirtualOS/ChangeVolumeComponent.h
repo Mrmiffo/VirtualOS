@@ -19,6 +19,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Custom functions")
 		void changeMasterVolume(float newSoundLevel);
 
+	UFUNCTION(BlueprintCallable, Category = "Custom functions")
+		void getMasterVolume(float& currentSoundLevel);
+
 	// Called when the game starts
 	virtual void BeginPlay() override;
 	
