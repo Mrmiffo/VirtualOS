@@ -70,7 +70,7 @@ bool UFileSystemBPLibrary::MakeDirectory(FString pathToCreate, bool makeNeededSu
 bool UFileSystemBPLibrary::MoveFile(FString source, FString target, bool replaceIfExists)
 {
 	IFileManager& Manager = IFileManager::Get();
-	if (Manager.FileExists(*source)) {
+	if (Manager.FileExists(*source) && !Manager.FileExists(*target)) {
 		return Manager.Move(*target, *source, replaceIfExists);
 	}
 	return false;
